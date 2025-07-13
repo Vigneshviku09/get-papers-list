@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "get-papers-list-VigR"
+version = "0.1.0"
+description = "Fetch PubMed papers with authors from biotech/pharma companies"
+authors = ["Vignesh_Ravichandran <vigneshravichandran0905@gmail.com>"]
+packages = [{ include = "get_papers" }]
+
+[tool.poetry.scripts]
+get-papers-list = "get_papers.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = ">=2.28,<3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+pytest-mock = "^3.14.0"
+types-requests = "^2.32.0.20240602"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
